@@ -103,7 +103,7 @@ function Edit({ employees, selectedEmployee, setEmployees, setIsEditing }) {
                         style={{ marginLeft: '12px' }}
                         className="muted-button"
                         type="button"
-                        value="Cancel"
+                        value="Annuler"
                         onClick={() => setIsEditing(false)}
                     />
                 </div>
