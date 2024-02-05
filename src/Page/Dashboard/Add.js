@@ -52,8 +52,16 @@ function Add({ employees, setEmployees, setIsAdding }) {
     return (
         <div className="small-container">
             <form onSubmit={handleAdd}>
-                <h1>Add Employee</h1>
-                <label htmlFor="firstName">First Name</label>
+                <h1>Ajouter un employé</h1>
+                <label htmlFor="lastName">Nom(s)</label>
+                <input
+                    id="lastName"
+                    type="text"
+                    name="lastName"
+                    value={lastName}
+                    onChange={e => setLastName(e.target.value)}
+                />
+                <label htmlFor="firstName">Prénom(s)</label>
                 <input
                     id="firstName"
                     type="text"
@@ -62,14 +70,7 @@ function Add({ employees, setEmployees, setIsAdding }) {
                     value={firstName}
                     onChange={e => setFirstName(e.target.value)}
                 />
-                <label htmlFor="lastName">Last Name</label>
-                <input
-                    id="lastName"
-                    type="text"
-                    name="lastName"
-                    value={lastName}
-                    onChange={e => setLastName(e.target.value)}
-                />
+              
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
@@ -95,12 +96,12 @@ function Add({ employees, setEmployees, setIsAdding }) {
                     onChange={e => setDate(e.target.value)}
                 />
                 <div style={{ marginTop: '30px' }}>
-                    <input type="submit" value="Add" />
+                    <input type="submit" value="Ajouter" />
                     <input
                         style={{ marginLeft: '12px' }}
                         className="muted-button"
                         type="button"
-                        value="Cancel"
+                        value="Annuler"
                         onClick={() => setIsAdding(false)}
                     />
                 </div>
